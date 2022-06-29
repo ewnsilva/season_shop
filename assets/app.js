@@ -38,16 +38,20 @@ class SeasonStore {
         description.classList.add("container__description")
     
         const departament = document.createElement("span")
-        departament.innerText = productItem.department
+        departament.innerText = `Departamento: ${productItem.department}`
 
         const product = document.createElement("span")
-        product.innerText = productItem.product
+        product.innerText = `Tipo de produto: ${productItem.product}`
         product.classList.add("container__product")
     
         const productDiv = document.createElement("div")
         productDiv.classList.add("product__container")
     
-        productDiv.append(name, image, price, description, departament, product)
+        const buyButton = document.createElement("button")
+        buyButton.innerText = "Adicionar ao Carrinho"
+        buyButton.classList.add("container__button")
+
+        productDiv.append(name, image, price, description, departament, product, buyButton)
         listDiv.appendChild(productDiv)
     }
     

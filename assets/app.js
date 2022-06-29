@@ -38,9 +38,8 @@ class SeasonStore {
         description.classList.add("container__description")
     
         const departament = document.createElement("span")
-        departament.innerText = productItem.departament
-        departament.classList.add("container__departament")
-        
+        departament.innerText = productItem.department
+
         const product = document.createElement("span")
         product.innerText = productItem.product
         product.classList.add("container__product")

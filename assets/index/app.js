@@ -45,6 +45,7 @@ class SeasonStore {
         
             const departmentProduct = document.createElement("span")
             departmentProduct.innerText = `Departamento: ${department}`
+            departmentProduct.classList.add("container__department")
     
             const productProduct = document.createElement("span")
             productProduct.innerText = `Tipo de Produto: ${product}`

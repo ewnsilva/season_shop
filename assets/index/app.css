@@ -2,6 +2,20 @@ header {
     text-align: center;
 }
 
+h1{
+    font-family: 'Electrolize', sans-serif;
+    font-size: 50px;
+    color: rgb(16, 50, 129);;
+    border: 3px solid rgb(16, 50, 129);;
+    border-radius: 5px;
+}
+
+.list__title{
+    font-family: 'Electrolize', sans-serif;
+    font-size: 35px;
+    color: rgb(16, 50, 129);;
+}
+
 .mainStore {
     display: flex;
     justify-content: space-between;
@@ -11,17 +25,48 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     position: absolute;
 }
 
 .list__product {
     display: flex;
+    font-family: arial;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     gap: 10px;
-    width: 75%;
+    width: 80%;
+}
+
+.container__name{
+    
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(16, 50, 129);
+
+}
+
+.container__price{
+    color: green;
+    font-weight: 1000;
+}
+
+.container__department, .container__product{
+    font-size: 12px;
+}
+
+.container__button{
+    width: 70%;
+    transition: all 0.2s;
+    background-color: green;
+    color: white;
+    border: 2px solid green;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container__button:hover{
+    width: 80%;
 }
 
 .product__container {
@@ -32,7 +77,8 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid black;
+    border: 5px solid rgb(16, 50, 129);;
+    border-radius: 5px;
 }
 
 .container__image {
@@ -49,12 +95,12 @@ header {
 
 .mainStore__buy {
     height: 100vh;
+    width: 230px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: gold;
-
+    background-color: rgb(16, 50, 129);;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -69,25 +115,41 @@ header {
 }
 
 .upperBox__title {
+    font-family: 'Electrolize', sans-serif;
+    font-size: 45px;
+    color: white;
     text-align: center;
     justify-content: center;
 }
 
 .upperBox__cart {
-    width: 100%;
+    width: 220px;
+    line-height: 1.2;
+    gap: 10px;
+    color: white;
+    font-size: 12pt;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: justify;
     padding: 0;
     list-style: none;
 }
 
 .cart__product {
     width: 100%;
-    display: flex;
+    margin-bottom: 20px;
     justify-content: space-around;
-    border: 1px solid black;
-    margin: 7px 0;
+    border: 10px solid black;
+}
+
+.remove__button{
+    color:white;
+    float: right;
+    justify-content: right;
+    background-color:transparent;
+    border:2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .buy__info {
@@ -95,8 +157,18 @@ header {
     flex-direction: column;
 }
 
-.info__total, .info__button {
+.info__button {
+    color: white;
+    transition: all 0.2s;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 30px;
+    text-decoration: none;
     text-align: center;
-    border: 1px solid black;
-    margin-bottom: 20px;
+    border: 3px solid white;
+    margin-bottom: 40px;
+}
+
+.info__button:hover {
+
+    border: 6px solid white;
 }

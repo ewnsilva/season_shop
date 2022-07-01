@@ -9,7 +9,7 @@ header {
 }
 
 h1{
-    font-family: 'Electrolize', sans-serif;
+    font-family: Arial;
     font-size: 50px;
     color: rgb(16, 50, 129);;
     border: 3px solid rgb(16, 50, 129);;
@@ -17,7 +17,7 @@ h1{
 }
 
 .list__title{
-    font-family: 'Electrolize', sans-serif;
+    font-family: Arial;
     font-size: 35px;
     color: rgb(16, 50, 129);;
 }
@@ -63,7 +63,7 @@ h1{
 
 .container__button{
     width: 70%;
-    transition: all 0.2s;
+    transition: all 0.3s;
     background-color: green;
     color: white;
     border: 2px solid green;
@@ -150,12 +150,17 @@ h1{
 
 .remove__button{
     color:white;
+    transition: all 0.3s;
     float: right;
     justify-content: right;
     background-color:transparent;
     border:2px solid white;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.remove__button:hover{
+    background-color: red;
 }
 
 .buy__info {
@@ -165,7 +170,7 @@ h1{
 
 .info__button {
     color: white;
-    transition: all 0.2s;
+    transition: all 0.3s;
     font-family: 'Electrolize', sans-serif;
     font-size: 30px;
     text-decoration: none;

@@ -1,39 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/cart/app.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <h1>Season Shop</h1>
     </header>
 
-    <main>
+    <main class="mainCart">
 
-        <section>
-            <h2>Finalizando Compras</h2>
-        </section>
+        <div class="mainCart__cart">
 
-        <div>
-            <h3>Carrinho</h3>
+        <h2 class="cart__title">Finalizando Compras</h2>
 
-            <ul>
-                <li>
-                    Produtos
-                </li>
+            <div class="Cart__header">
+                <h3 class="cart__title">Carrinho</h3>
+                <a href="index.html" class="cart__button">Continuar Comprando</a>
+            </div>
+
+            <ul class="cart__products">
+                
             </ul>
 
         </div>
-            <h3>Valor Total</h3>
-            <h3>Price</h3>
-        <div>
+
+        <div class="mainCart__price">
+
+            <span class="price__total">Valor Total</span>
+            <span class="price__money">R$ Valor</span>
 
         </div>
 
     </main>
 
+    <script src="./assets/cart/app.js" type="module"></script>
 </body>
+
 </html>

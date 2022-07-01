@@ -28,7 +28,7 @@ class Cart {
             QtdContainer.classList.add("extraInfo__container")
 
             const QtdSpan = document.createElement("span")
-            QtdSpan.innerText = "Qtd"
+            QtdSpan.innerText = "Quantidade"
             QtdSpan.classList.add("extraInfo__title")
 
             const QtdInput = document.createElement("input")
@@ -55,7 +55,7 @@ class Cart {
             PriceContainer.classList.add("extraInfo__container")
 
             const PriceTitle = document.createElement("span")
-            PriceTitle.innerText = "PreÃ§o"
+            PriceTitle.innerText = "Preço"
             PriceTitle.classList.add("extraInfo__title")
 
             const PriceMessage = document.createElement("span")
@@ -77,6 +77,25 @@ class Cart {
 
             cartProducts.appendChild(boughtProduct)
         })
+
+        this.totalMoney(products)
+    }
+
+    static totalMoney(products) {
+
+        let totalMoney = 0
+
+        for(let i = 0; i < products.length; i++){
+            totalMoney += Number(products[i].price)
+        }
+
+        const totalMoneyContainer = document.querySelector(".mainCart__price")
+
+        const totalMoneySpan = document.createElement("span")
+        totalMoneySpan.innerText = `R$ ${totalMoney}.00`
+        totalMoneySpan.classList.add("price__money")
+        
+        totalMoneyContainer.appendChild(totalMoneySpan)
     }
 }
 

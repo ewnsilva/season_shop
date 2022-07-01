@@ -1,4 +1,10 @@
+body {
+    margin: 0
+}
+
+
 header {
+    width: calc(102% - 259px); /* DiferenÃ§a de tamanho do carrinho */
     text-align: center;
 }
 
@@ -22,6 +28,7 @@ h1{
 }
 
 .mainStore__list {
+    width: calc(100% - 258px); /* DiferenÃ§a de tamanho do carrinho */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,10 +39,9 @@ h1{
     display: flex;
     font-family: arial;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-    width: 80%;
 }
 
 .container__name{

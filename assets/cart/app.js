@@ -4,7 +4,7 @@ class Cart {
     static showProducts() {
         const products = SeasonStore.cartProducts
         
-        products.forEach(({ image, name, price, id }) => {
+        products.forEach(({ image, name, price, id, quantity }) => {
 
             const cartProducts = document.querySelector(".cart__products")
 
@@ -23,12 +23,11 @@ class Cart {
             const extraInfos = document.createElement("div")
             extraInfos.classList.add("product__extraInfo")
 
-            /*  */
             const QtdContainer = document.createElement("div")
             QtdContainer.classList.add("extraInfo__container")
 
             const QtdSpan = document.createElement("span")
-            QtdSpan.innerText = "Quantidade"
+            QtdSpan.innerText = "Qtd"
             QtdSpan.classList.add("extraInfo__title")
 
             const QtdInput = document.createElement("input")
@@ -36,7 +35,7 @@ class Cart {
             QtdInput.value = 1
             QtdInput.classList.add("extraInfo__input")
 
-            /*  */
+            products.quantity = QtdInput 
 
             const ReceiveContainer = document.createElement("div")
             ReceiveContainer.classList.add("extraInfo__container")
@@ -48,8 +47,6 @@ class Cart {
             const ReceiveMessage = document.createElement("span")
             ReceiveMessage.innerText = "Receba ainda hoje"
             ReceiveMessage.classList.add("extraInfo__receive")
-
-            /*  */
 
             const PriceContainer = document.createElement("div")
             PriceContainer.classList.add("extraInfo__container")
@@ -77,7 +74,6 @@ class Cart {
 
             cartProducts.appendChild(boughtProduct)
         })
-
         this.totalMoney(products)
     }
 

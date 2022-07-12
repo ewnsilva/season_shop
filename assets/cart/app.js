@@ -27,7 +27,7 @@ class Cart {
             QtdContainer.classList.add("extraInfo__container")
 
             const QtdSpan = document.createElement("span")
-            QtdSpan.innerText = "Qtd"
+            QtdSpan.innerText = "Quantidade"
             QtdSpan.classList.add("extraInfo__title")
 
             const QtdInput = document.createElement("input")

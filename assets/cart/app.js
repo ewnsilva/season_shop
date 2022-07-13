@@ -73,6 +73,12 @@ class Cart {
             boughtProduct.append(productImage, productName, extraInfos)
 
             cartProducts.appendChild(boughtProduct)
+
+            QtdInput.addEventListener("change", (e) => {
+                const actualPrice = Number(e.target.value) * Number(price)
+                PriceMessage.innerText = `R$ ${actualPrice.toFixed(2)}`
+            })
+
         })
         this.totalMoney(products)
     }

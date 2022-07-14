@@ -78,7 +78,6 @@ class Cart {
                 const actualPrice = Number(e.target.value) * Number(price)
                 PriceMessage.innerText = `R$ ${actualPrice.toFixed(2)}`
             })
-
         })
         this.totalMoney(products)
     }
@@ -86,15 +85,15 @@ class Cart {
     static totalMoney(products) {
 
         let totalMoney = 0
-
+        
         for(let i = 0; i < products.length; i++){
-            totalMoney += Number(products[i].price)
-        }
+                totalMoney += Number(products[i].price)
+            }
 
         const totalMoneyContainer = document.querySelector(".mainCart__price")
 
         const totalMoneySpan = document.createElement("span")
-        totalMoneySpan.innerText = `R$ ${totalMoney}.00`
+        totalMoneySpan.innerText = `R$ ${totalMoney.toFixed(2)}`
         totalMoneySpan.classList.add("price__money")
         
         totalMoneyContainer.appendChild(totalMoneySpan)

@@ -66,7 +66,6 @@ export class SeasonStore {
             productDiv.append(nameProduct, imageProduct, priceProduct, descriptionProduct, departmentProduct, productProduct, buyButton)
 
             listDiv.appendChild(productDiv)
-
         })
 
         const buyButtons = document.querySelectorAll(".container__button")
@@ -86,8 +85,6 @@ export class SeasonStore {
             localStorage.setItem("cartItens", JSON.stringify(this.cartProducts))
             this.createCartProducts([product])
         }
-
-
 
     }
 

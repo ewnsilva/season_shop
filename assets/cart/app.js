@@ -75,8 +75,8 @@ class Cart {
             cartProducts.appendChild(boughtProduct)
 
             QtdInput.addEventListener("change", (e) => {
-                const actualPrice = Number(e.target.value) * Number(price)
-                PriceMessage.innerText = `R$ ${actualPrice.toFixed(2)}`
+            const actualPrice = Number(e.target.value) * Number(price)
+            PriceMessage.innerText = `R$ ${actualPrice.toFixed(2)}`
             })
         })
         this.totalMoney(products)
@@ -98,6 +98,28 @@ class Cart {
         
         totalMoneyContainer.appendChild(totalMoneySpan)
     }
+
+    static buyItensAlert() {
+        const button = document.createElement('button')
+        button.classList.add("buy__itens")
+        button.innerText = "Confirmar Compra"
+        
+        const buttonContainer = document.querySelector('.mainCart__price')
+        buttonContainer.appendChild(button)
+
+        const popup = document.querySelector(".popup__wrapper")
+        const confirm = document.querySelector('.popup__confirm')
+
+        button.addEventListener('click', () => {
+            popup.style.display = 'block'
+        } )
+
+        confirm.addEventListener('click', () => {
+            popup.style.display = 'none'
+        } )
+    }
+
 }
 
 Cart.showProducts()
+Cart.buyItensAlert()

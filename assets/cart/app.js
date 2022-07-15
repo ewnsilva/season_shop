@@ -4,7 +4,7 @@ class Cart {
     static showProducts() {
         const products = SeasonStore.cartProducts
         
-        products.forEach(({ image, name, price, id, quantity }) => {
+        products.forEach(({ image, name, price, id}) => {
 
             const cartProducts = document.querySelector(".cart__products")
 
@@ -23,60 +23,70 @@ class Cart {
             const extraInfos = document.createElement("div")
             extraInfos.classList.add("product__extraInfo")
 
-            const QtdContainer = document.createElement("div")
-            QtdContainer.classList.add("extraInfo__container")
+            const qtdContainer = document.createElement("div")
+            qtdContainer.classList.add("extraInfo__container")
 
-            const QtdSpan = document.createElement("span")
-            QtdSpan.innerText = "Quantidade"
-            QtdSpan.classList.add("extraInfo__title")
+            const qtdSpan = document.createElement("span")
+            qtdSpan.innerText = "Quantidade"
+            qtdSpan.classList.add("extraInfo__title")
 
-            const QtdInput = document.createElement("input")
-            QtdInput.type = "number"
-            QtdInput.value = 1
-            QtdInput.classList.add("extraInfo__input")
+            const qtdInput = document.createElement("input")
+            qtdInput.type = "number"
+            qtdInput.value = 1
+            qtdInput.classList.add("extraInfo__input")
 
-            products.quantity = QtdInput 
+            const receiveContainer = document.createElement("div")
+            receiveContainer.classList.add("extraInfo__container")
 
-            const ReceiveContainer = document.createElement("div")
-            ReceiveContainer.classList.add("extraInfo__container")
+            const receiveTitle = document.createElement("span")
+            receiveTitle.innerText = "Entrega"
+            receiveTitle.classList.add("extraInfo__title")
 
-            const ReceiveTitle = document.createElement("span")
-            ReceiveTitle.innerText = "Entrega"
-            ReceiveTitle.classList.add("extraInfo__title")
+            const receiveMessage = document.createElement("span")
+            receiveMessage.innerText = "Receba ainda hoje"
+            receiveMessage.classList.add("extraInfo__receive")
 
-            const ReceiveMessage = document.createElement("span")
-            ReceiveMessage.innerText = "Receba ainda hoje"
-            ReceiveMessage.classList.add("extraInfo__receive")
+            const priceContainer = document.createElement("div")
+            priceContainer.classList.add("extraInfo__container")
 
-            const PriceContainer = document.createElement("div")
-            PriceContainer.classList.add("extraInfo__container")
+            const priceTitle = document.createElement("span")
+            priceTitle.innerText = "PreÃ§o"
+            priceTitle.classList.add("extraInfo__title")
 
-            const PriceTitle = document.createElement("span")
-            PriceTitle.innerText = "Preço"
-            PriceTitle.classList.add("extraInfo__title")
+            const valueContainer = document.createElement("div")
+            valueContainer.classList.add("extraInfo__value")
 
-            const PriceMessage = document.createElement("span")
-            PriceMessage.innerText = `R$ ${price}`
-            PriceMessage.classList.add("extraInfo__price")
+            const coin = document.createElement("span")
+            coin.innerText = "R$ "
+            coin.classList.add("extraInfo__coin")
 
-            const PriceRemoveButton = document.createElement("button")
-            PriceRemoveButton.innerText = "Remover"
-            PriceRemoveButton.classList.add("extraInfo__button")
-            PriceRemoveButton.addEventListener("click", (e) => this.removeCartProducts(e.target))
+            const priceMessage = document.createElement("span")
+            priceMessage.innerText = (price)
+            priceMessage.classList.add("extraInfo__price")
 
-            extraInfos.append(QtdContainer, ReceiveContainer, PriceContainer)
+            const priceRemoveButton = document.createElement("button")
+            priceRemoveButton.innerText = "Remover"
+            priceRemoveButton.classList.add("extraInfo__button")
+            priceRemoveButton.addEventListener("click", (e) => {
+                SeasonStore.removeCartProducts(e.target.parentElement.parentElement)
+                this.updateTotalMoney()
+            })
 
-            QtdContainer.append(QtdSpan, QtdInput)
-            ReceiveContainer.append(ReceiveTitle, ReceiveMessage)
-            PriceContainer.append(PriceTitle, PriceMessage, PriceRemoveButton)
+            extraInfos.append(qtdContainer, receiveContainer, priceContainer)
+
+            qtdContainer.append(qtdSpan, qtdInput)
+            receiveContainer.append(receiveTitle, receiveMessage)
+            priceContainer.append(priceTitle,valueContainer,priceRemoveButton)
+            valueContainer.append(coin, priceMessage)
 
             boughtProduct.append(productImage, productName, extraInfos)
 
             cartProducts.appendChild(boughtProduct)
 
-            QtdInput.addEventListener("change", (e) => {
-            const actualPrice = Number(e.target.value) * Number(price)
-            PriceMessage.innerText = `R$ ${actualPrice.toFixed(2)}`
+            qtdInput.addEventListener("change", (e) => {
+                const totalPrice = Number(e.target.value) * Number(price)
+                priceMessage.innerText = totalPrice.toFixed(2)
+                this.updateTotalMoney()
             })
         })
         this.totalMoney(products)

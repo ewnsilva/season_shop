@@ -115,11 +115,9 @@ class Cart {
         
         arrayPrices.forEach(price => {
             allPrices += Number(price.innerText)
-            console.log(price)
         })
         const totalMoneySpan= document.querySelector(".price__money > span")
         totalMoneySpan.innerText = `R$ ${allPrices.toFixed(2)}`
-        console.log(allPrices)
         }
 
     static buyItensAlert() {

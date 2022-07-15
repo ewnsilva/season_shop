@@ -50,7 +50,7 @@ class Cart {
             priceContainer.classList.add("extraInfo__container")
 
             const priceTitle = document.createElement("span")
-            priceTitle.innerText = "PreÃ§o"
+            priceTitle.innerText = "Preço"
             priceTitle.classList.add("extraInfo__title")
 
             const valueContainer = document.createElement("div")
@@ -92,22 +92,35 @@ class Cart {
         this.totalMoney(products)
     }
 
-    static totalMoney(products) {
+    static totalMoney(totalPrice) {
 
         let totalMoney = 0
-        
-        for(let i = 0; i < products.length; i++){
-                totalMoney += Number(products[i].price)
-            }
 
-        const totalMoneyContainer = document.querySelector(".mainCart__price")
+        for(let i = 0; i <totalPrice.length; i++){
+            totalMoney += Number(totalPrice[i].price)
+        }
+
+        const totalMoneyContainer = document.querySelector(".price__money")
 
         const totalMoneySpan = document.createElement("span")
-        totalMoneySpan.innerText = `R$ ${totalMoney.toFixed(2)}`
-        totalMoneySpan.classList.add("price__money")
-        
+        totalMoneySpan.innerText = `R$${totalMoney.toFixed(2)}`
         totalMoneyContainer.appendChild(totalMoneySpan)
-    }
+
+        }
+        
+    static updateTotalMoney() {
+        let allPrices = 0
+        
+        const arrayPrices = document.querySelectorAll('.extraInfo__price') 
+        
+        arrayPrices.forEach(price => {
+            allPrices += Number(price.innerText)
+            console.log(price)
+        })
+        const totalMoneySpan= document.querySelector(".price__money > span")
+        totalMoneySpan.innerText = `R$ ${allPrices.toFixed(2)}`
+        console.log(allPrices)
+        }
 
     static buyItensAlert() {
         const button = document.createElement('button')

@@ -13,10 +13,6 @@ h1{
 
 .cart__title{
     text-align: center;
-    font-family: Arial;
-    font-size: 35px;
-    color: rgb(16, 50, 129);
-    margin-left: 16.5%;
 }
 
 .mainCart {
@@ -31,12 +27,15 @@ h1{
 .mainCart__cart {
     display: flex;
     flex-direction: column;
-}
-
-.mainCart__cart {
-    display: flex;
     background-color: white;
     width: 85%;
+}
+
+.mainCart__cart h2{
+    font-family: Arial;
+    font-size: 35px;
+    color: rgb(16, 50, 129);
+    margin-left: 16.5%;
 }
 
 .cart__header {
@@ -152,6 +151,7 @@ h1{
     display: block;
     text-align: center;
     font-weight: 800;
+    padding-bottom: 10px;
 }
 
 .buy__itens{

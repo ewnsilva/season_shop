@@ -4,11 +4,9 @@ O projeto Season Shop trata-se se uma avaliação técnica para concorrer a uma 
 
 <p align="center"><img src ="https://user-images.githubusercontent.com/83819706/179720299-d0e8306e-f0d8-409f-97ca-475daa8a4230.png" width= 250px>
 
-
 <h2>Sobre</h2>
 
 Neste aplicativo, o usuário poderá adicionar ou remover os produtos do catalogo no carrinho de compras, contando com duas telas interativas. A primeira sendo a tela inicial onde o usuário poderá observar os produtos disponiveis para a compra, e na segunda tela, poderá verificar os itens no carrinho e alterar a quantidade de cada um para posteriormente confirmar a compra.
-
 
 <h2>Como Utilizar</h2>
 

@@ -2,7 +2,7 @@
 
 O projeto Season Shop trata-se se uma avaliação técnica para concorrer a uma vaga de estágio oferecida pela Season, onde consiste no desenvolvimento de uma loja simples que será feita através do uso das tecnologias HTML, CSS e Javascript.
 
-<p align="center"><img src ="https://user-images.githubusercontent.com/83819706/176919623-fd3e5f95-9177-4741-a557-0f08540919da.png">
+<p align="center"><img src ="https://user-images.githubusercontent.com/83819706/179720299-d0e8306e-f0d8-409f-97ca-475daa8a4230.png">
 
 
 <h2>Sobre</h2>
@@ -25,5 +25,11 @@ Depois de conferir todos os itens que foram adicionados ao carrinho, o usuário 
 <p align="center"><img src ="https://user-images.githubusercontent.com/83819706/176919445-8b860b37-872d-4ccc-9adb-bfb00e22fb07.png">
 
 Assim que o usuário utilizar o botão "Comprar", ele será redirecionado a página de finalização a compra, onde poderá remover ou alterar a quantidade de itens adionados ao carrinho. Nesta página, o usuario poderá ver o valor total de sua compra e poderá posteriormente finalizar a compra.
+
+<p align="center"><img src ="https://user-images.githubusercontent.com/83819706/179720605-e7a17730-977e-49ca-8dad-f595a5eb6531.png">
+
+<p align="center"><img src ="https://user-images.githubusercontent.com/83819706/179720716-17fb58d5-d50b-454a-ae63-0dd54b60c090.png">
+
+<p align="center"><img src ="https://user-images.githubusercontent.com/83819706/179720786-5a0b33a3-3b10-49e1-9810-e1fb6a26fc98.png">
 
 ⚠ Atualmente o projeto se encontra em fase de desenvolvimento (confecção da página de finalização de compra).

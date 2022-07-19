@@ -76,7 +76,7 @@ class Cart {
 
             qtdContainer.append(qtdSpan, qtdInput)
             receiveContainer.append(receiveTitle, receiveMessage)
-            priceContainer.append(priceTitle,valueContainer,priceRemoveButton)
+            priceContainer.append(priceTitle, priceMessage, valueContainer,priceRemoveButton)
             valueContainer.append(coin, priceMessage)
 
             boughtProduct.append(productImage, productName, extraInfos)

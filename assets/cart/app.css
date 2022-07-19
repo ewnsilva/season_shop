@@ -118,9 +118,11 @@ h1{
 .extraInfo__button{
     background-color: red;
     color: white;
+    font-size: 12px;
     border-radius: 5px;
     transition: all 0.3s;
     width: 100%;
+    justify-content: center;
 }
 
 .extraInfo__button:hover{
@@ -157,7 +159,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
+    width: 80%;
     height: 50px;
     background-color: green;
     color: white;

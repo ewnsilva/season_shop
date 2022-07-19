@@ -27,7 +27,7 @@ Nesta nova página, o usuário poderá remover ou alterar a quantidade de itens 
 
 <p align="center"><img src ="https://user-images.githubusercontent.com/83819706/179720605-e7a17730-977e-49ca-8dad-f595a5eb6531.png">
 
-Ao lado direiro, o usuário poderá observar uma pequena tela com fundo azul que indica o valor total dos produtos. Este valorpor sua vez altera conforme o usuário alterar a quantidade de produtos, ou remover o mesmo da lista de compras através do botão que fica logo a baixo do valor do produto. 
+Ao lado direiro, o usuário poderá observar uma pequena tela com fundo azul que indica o valor total dos produtos. Este valor por sua vez é modificado conforme o usuário alterar a quantidade de produtos, ou remover o mesmo da lista de compras através do botão que fica logo a baixo do valor do produto. 
 
 <p align="center"><img src ="https://user-images.githubusercontent.com/83819706/179720716-17fb58d5-d50b-454a-ae63-0dd54b60c090.png">
 

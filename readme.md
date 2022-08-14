@@ -45,7 +45,7 @@ Para acessar este aplicativo, o usuário deverá possuir em seu computador pesso
 Após instalar estas ferramentas, o terminal do seu sistema, e utilize o seguinte:
 
 ```
-git clone ewnsilva/season_shop
+git clone https://github.com/ewnsilva/season_shop.git
 ```
 ```
 cd season_shop
